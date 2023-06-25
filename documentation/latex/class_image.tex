@@ -1,0 +1,623 @@
+\hypertarget{class_image}{}\doxysection{Image Class Reference}
+\label{class_image}\index{Image@{Image}}
+
+
+The \mbox{\hyperlink{class_image}{Image}} class is where all the important transformations happen.  
+
+
+
+
+{\ttfamily \#include $<$Image.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_image_a910ae06464143720b7b77990a1d59734}{Image}} (const std\+::string \&\mbox{\hyperlink{class_image_aec8a33f176362d146da8c058798ebbff}{path}})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_image}{Image}} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_image_a4bbff5aeb346fd0a5131812c34cbc925}{Image}} (const std\+::string \&path1, const std\+::string \&path2, bool is)
+\begin{DoxyCompactList}\small\item\em A constructor handling cases for image collage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_image_a0294f63700543e11c0f0da85601c7ae5}{$\sim$\+Image}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_image}{Image}} destructor (default) \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_image_a04f5d29842ecbff2da2afc5ff6405e7c}{get\+Format}} () const
+\begin{DoxyCompactList}\small\item\em Getter method that returns the format of the image. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_image_a6db552d0133cd5efbadd297261f43745}{get\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Getter method that returns\texorpdfstring{$>$}{>} the path of the image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_a3954f39880706933113d7ac13a796984}{load\+Img}} ()
+\begin{DoxyCompactList}\small\item\em Loads image info from the path that was given. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_ad2a4032329c4f3b6043fc267c9d870ea}{reset\+Current\+Image}} ()
+\begin{DoxyCompactList}\small\item\em Resets the current\+Img to the original\+Img and it\textquotesingle{}s with and height. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_a0c44af8675c0dc152c15f39d56e9916e}{grayscale}} ()
+\begin{DoxyCompactList}\small\item\em Turns the current\+Img pixel values to gray values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_a8cc121f7839f8b020bdd07b7351e7327}{monochrome}} ()
+\begin{DoxyCompactList}\small\item\em Turns the current\+Img pixel values to black/white values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_a86bcc8dc8183e21f0aab8ef2c7af4b88}{negative}} ()
+\begin{DoxyCompactList}\small\item\em Turns the current\+Img pixel values to inverse values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_a119e09b1addd48b535ddd20ff9c1f7c7}{rotate\+Right}} ()
+\begin{DoxyCompactList}\small\item\em Rotates the current\+Img to the right and also swaps current\+Width and current\+Height. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_ad9fb4fd4857b451e330bf37dcc6bc91d}{rotate\+Left}} ()
+\begin{DoxyCompactList}\small\item\em Rotates the current\+Img to the left and also swaps current\+Width and current\+Height. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_ace70dae82180c76a16d85e8b81e39f20}{flip\+Vertical}} ()
+\begin{DoxyCompactList}\small\item\em Flips the matrix on its y axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_a82d860b94ad3e5250fb077e063ce3fa6}{flip\+Horizontal}} ()
+\begin{DoxyCompactList}\small\item\em Flips the matrix on its x axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_a08df59edbd4db26d5aebeb08b26f9067}{crop}} (int x\+Beg, int y\+Beg, int x\+End, int y\+End)
+\begin{DoxyCompactList}\small\item\em Crops the image to a new size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_a643d9f46961e8372b6a573246aad66d1}{save}} ()
+\begin{DoxyCompactList}\small\item\em Saves the image depending on what format it is. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_image_af3826c2f78c8498e9c56661dba05437a}{load\+Header}} (std\+::ifstream \&)
+\begin{DoxyCompactList}\small\item\em Loads the header of the image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_a445de53013dfb1555314d2bb9b846e8b}{get\+Comment}} (std\+::ifstream \&) const
+\item 
+std\+::string \mbox{\hyperlink{class_image_ad51519ad12bf978978d6767381beec22}{get\+New\+Path}} ()
+\begin{DoxyCompactList}\small\item\em Returns a string with the the new file location. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_a3c4ca45f5caf55e7af10dc28c5c4c595}{load\+P1}} (std\+::ifstream \&)
+\begin{DoxyCompactList}\small\item\em Load a {\bfseries{P1}} formatted image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_af9480aad1b308dbdcd76e73966658205}{load\+P2}} (std\+::ifstream \&)
+\begin{DoxyCompactList}\small\item\em Load a {\bfseries{P2}} formatted image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_a1fdcb243841a9037fac1dd43e4634a06}{load\+P3}} (std\+::ifstream \&)
+\begin{DoxyCompactList}\small\item\em Load a {\bfseries{P3}} formatted image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_ace2d772c87c18506d0320d2ee9e7feb8}{load\+P5}} (std\+::ifstream \&)
+\begin{DoxyCompactList}\small\item\em Load a {\bfseries{P5}} formatted image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_af31a587ded24aeb54a02fe55c3e561f3}{load\+P6}} (std\+::ifstream \&)
+\begin{DoxyCompactList}\small\item\em Load a {\bfseries{P6}} formatted image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_a245549a4e56b23827474c630ca5b8c8c}{save\+P1}} (std\+::ofstream \&out)
+\begin{DoxyCompactList}\small\item\em Save an image with format {\bfseries{P1}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_a44ad35979f98a8b5bdf146c1848f770e}{save\+P2}} (std\+::ofstream \&out)
+\begin{DoxyCompactList}\small\item\em Save an image with format {\bfseries{P2}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_a3ce3bda906712113c877548a19caa3c6}{save\+P3}} (std\+::ofstream \&out)
+\begin{DoxyCompactList}\small\item\em Save an image with format {\bfseries{P3}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_adfe184b7949468b99c0b919793b8f282}{save\+P5}} (std\+::string \&new\+Path)
+\begin{DoxyCompactList}\small\item\em Save an image with format {\bfseries{P5}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_a3e89d808f22eb3754bb73959b93a950d}{save\+P6}} (std\+::string \&new\+Path)
+\begin{DoxyCompactList}\small\item\em Save an image with format {\bfseries{P6}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_aca04c91b3821f8f1a315877a31b174da}{negative\+P1}} ()
+\begin{DoxyCompactList}\small\item\em Turns an image with format {\bfseries{P1}} negative. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_aec09fe60470e382bb5d8beccdba6e5cc}{negative\+P2}} ()
+\begin{DoxyCompactList}\small\item\em Turns an image with format {\bfseries{P2}} negative. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_acc63cd190fca18a5df88349f7dce555c}{negative\+P3}} ()
+\begin{DoxyCompactList}\small\item\em Turns an image with format {\bfseries{P3}} negative. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_a83189ea453893d1a4e2eb34de984b660}{monochrome\+P2}} ()
+\begin{DoxyCompactList}\small\item\em Turns an image with format {\bfseries{P2}} negative. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_a30447a348df039e3e6e44fb1875cd402}{monochrome\+P3}} ()
+\begin{DoxyCompactList}\small\item\em Turns an image with format {\bfseries{P3}} negative. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_image_ae2379b7f0c93169809b3b0de1d3046fc}{print}} () const
+\begin{DoxyCompactList}\small\item\em a method made for debugging purposes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_pixel}{Pixel}} $>$ $>$ \mbox{\hyperlink{class_image_a585b19982a77aa46d9ec25d980eb091d}{original\+Img}}
+\begin{DoxyCompactList}\small\item\em This is a matrix in which all the original image pixel data is stored. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_pixel}{Pixel}} $>$ $>$ \mbox{\hyperlink{class_image_af3218236c785b09ebf6ddc94eea170c1}{current\+Img}}
+\begin{DoxyCompactList}\small\item\em This is a matrix which stores all the current image pixel data. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_image_a9808a8b4b6d9b563f01c87b5946475d2}{format}}
+\begin{DoxyCompactList}\small\item\em Holds the original image format ({\itshape P1,P2, ..etc.}). \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_image_aec8a33f176362d146da8c058798ebbff}{path}}
+\begin{DoxyCompactList}\small\item\em Stored the original image file path. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_image_ab8d12f635013c04159cd4d3d972bac88}{width}}
+\begin{DoxyCompactList}\small\item\em Stored the width of the original image. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_image_a51df43db420c9c0b57536cb2dd36de5c}{height}}
+\begin{DoxyCompactList}\small\item\em Stored the height of the original image. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_image_ac35abac45ca717d84439716c9bd967e9}{current\+Width}}
+\item 
+int \mbox{\hyperlink{class_image_a31056dc58d240f3122000b33c1a33507}{current\+Height}}
+\begin{DoxyCompactList}\small\item\em \texorpdfstring{$<$}{<}Stores the current image width. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_image_a2f2ec6a87553fa4bfb55793aaed1f5fa}{max\+Val}}
+\begin{DoxyCompactList}\small\item\em Stores the max value of the image. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_image_a9c0a54104d04acb2e89b8668ee7f4ab5}{is\+Horizontal\+Collage}}
+\begin{DoxyCompactList}\small\item\em Stores {\itshape bool} value if the \mbox{\hyperlink{class_image}{Image}} is a collage of two images. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_image}{Image}} class is where all the important transformations happen. 
+
+This class is responsible for all image realated things 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_image_a910ae06464143720b7b77990a1d59734}\label{class_image_a910ae06464143720b7b77990a1d59734}} 
+\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_image}{Image}} constructor. 
+
+\begin{DoxyNote}{Note}
+If is\+Horizontal\+Collage = true and the \mbox{\hyperlink{class_image}{Image}} class is initialized through
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & is a reference to the path of the current image \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_image_a4bbff5aeb346fd0a5131812c34cbc925}\label{class_image_a4bbff5aeb346fd0a5131812c34cbc925}} 
+\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path1,  }\item[{const std\+::string \&}]{path2,  }\item[{bool}]{is }\end{DoxyParamCaption})}
+
+
+
+A constructor handling cases for image collage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path1} & path of the first image file \\
+\hline
+{\em path2} & path of the second image file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAttention}{Attention}
+This constructor doesnt work its only a concept 
+\end{DoxyAttention}
+\mbox{\Hypertarget{class_image_a0294f63700543e11c0f0da85601c7ae5}\label{class_image_a0294f63700543e11c0f0da85601c7ae5}} 
+\index{Image@{Image}!````~Image@{$\sim$Image}}
+\index{````~Image@{$\sim$Image}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{$\sim$Image()}{~Image()}}
+{\footnotesize\ttfamily Image\+::$\sim$\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\mbox{\hyperlink{class_image}{Image}} destructor (default) 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_image_a08df59edbd4db26d5aebeb08b26f9067}\label{class_image_a08df59edbd4db26d5aebeb08b26f9067}} 
+\index{Image@{Image}!crop@{crop}}
+\index{crop@{crop}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{crop()}{crop()}}
+{\footnotesize\ttfamily void Image\+::crop (\begin{DoxyParamCaption}\item[{int}]{x\+Beg,  }\item[{int}]{y\+Beg,  }\item[{int}]{x\+End,  }\item[{int}]{y\+End }\end{DoxyParamCaption})}
+
+
+
+Crops the image to a new size. 
+
+\begin{DoxyAttention}{Attention}
+This method {\bfseries{DOESN\textquotesingle{}T}} work! 
+\end{DoxyAttention}
+\mbox{\Hypertarget{class_image_a82d860b94ad3e5250fb077e063ce3fa6}\label{class_image_a82d860b94ad3e5250fb077e063ce3fa6}} 
+\index{Image@{Image}!flipHorizontal@{flipHorizontal}}
+\index{flipHorizontal@{flipHorizontal}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{flipHorizontal()}{flipHorizontal()}}
+{\footnotesize\ttfamily void Image\+::flip\+Horizontal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Flips the matrix on its x axis. 
+
+\mbox{\Hypertarget{class_image_ace70dae82180c76a16d85e8b81e39f20}\label{class_image_ace70dae82180c76a16d85e8b81e39f20}} 
+\index{Image@{Image}!flipVertical@{flipVertical}}
+\index{flipVertical@{flipVertical}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{flipVertical()}{flipVertical()}}
+{\footnotesize\ttfamily void Image\+::flip\+Vertical (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Flips the matrix on its y axis. 
+
+\mbox{\Hypertarget{class_image_a445de53013dfb1555314d2bb9b846e8b}\label{class_image_a445de53013dfb1555314d2bb9b846e8b}} 
+\index{Image@{Image}!getComment@{getComment}}
+\index{getComment@{getComment}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{getComment()}{getComment()}}
+{\footnotesize\ttfamily void Image\+::get\+Comment (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{is }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_image_a04f5d29842ecbff2da2afc5ff6405e7c}\label{class_image_a04f5d29842ecbff2da2afc5ff6405e7c}} 
+\index{Image@{Image}!getFormat@{getFormat}}
+\index{getFormat@{getFormat}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{getFormat()}{getFormat()}}
+{\footnotesize\ttfamily const std\+::string \& Image\+::get\+Format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter method that returns the format of the image. 
+
+\mbox{\Hypertarget{class_image_ad51519ad12bf978978d6767381beec22}\label{class_image_ad51519ad12bf978978d6767381beec22}} 
+\index{Image@{Image}!getNewPath@{getNewPath}}
+\index{getNewPath@{getNewPath}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{getNewPath()}{getNewPath()}}
+{\footnotesize\ttfamily std\+::string Image\+::get\+New\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Returns a string with the the new file location. 
+
+\mbox{\Hypertarget{class_image_a6db552d0133cd5efbadd297261f43745}\label{class_image_a6db552d0133cd5efbadd297261f43745}} 
+\index{Image@{Image}!getPath@{getPath}}
+\index{getPath@{getPath}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{getPath()}{getPath()}}
+{\footnotesize\ttfamily const std\+::string \& Image\+::get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter method that returns\texorpdfstring{$>$}{>} the path of the image. 
+
+\mbox{\Hypertarget{class_image_a0c44af8675c0dc152c15f39d56e9916e}\label{class_image_a0c44af8675c0dc152c15f39d56e9916e}} 
+\index{Image@{Image}!grayscale@{grayscale}}
+\index{grayscale@{grayscale}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{grayscale()}{grayscale()}}
+{\footnotesize\ttfamily void Image\+::grayscale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Turns the current\+Img pixel values to gray values. 
+
+\mbox{\Hypertarget{class_image_af3826c2f78c8498e9c56661dba05437a}\label{class_image_af3826c2f78c8498e9c56661dba05437a}} 
+\index{Image@{Image}!loadHeader@{loadHeader}}
+\index{loadHeader@{loadHeader}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{loadHeader()}{loadHeader()}}
+{\footnotesize\ttfamily void Image\+::load\+Header (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{is }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Loads the header of the image. 
+
+\begin{DoxyNote}{Note}
+This function could be made to work more efficiently 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_image_a3954f39880706933113d7ac13a796984}\label{class_image_a3954f39880706933113d7ac13a796984}} 
+\index{Image@{Image}!loadImg@{loadImg}}
+\index{loadImg@{loadImg}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{loadImg()}{loadImg()}}
+{\footnotesize\ttfamily void Image\+::load\+Img (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads image info from the path that was given. 
+
+\begin{DoxyNote}{Note}
+This function could be made to work more efficiently. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_image_a3c4ca45f5caf55e7af10dc28c5c4c595}\label{class_image_a3c4ca45f5caf55e7af10dc28c5c4c595}} 
+\index{Image@{Image}!loadP1@{loadP1}}
+\index{loadP1@{loadP1}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{loadP1()}{loadP1()}}
+{\footnotesize\ttfamily void Image\+::load\+P1 (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{is }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Load a {\bfseries{P1}} formatted image. 
+
+\mbox{\Hypertarget{class_image_af9480aad1b308dbdcd76e73966658205}\label{class_image_af9480aad1b308dbdcd76e73966658205}} 
+\index{Image@{Image}!loadP2@{loadP2}}
+\index{loadP2@{loadP2}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{loadP2()}{loadP2()}}
+{\footnotesize\ttfamily void Image\+::load\+P2 (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{is }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Load a {\bfseries{P2}} formatted image. 
+
+\mbox{\Hypertarget{class_image_a1fdcb243841a9037fac1dd43e4634a06}\label{class_image_a1fdcb243841a9037fac1dd43e4634a06}} 
+\index{Image@{Image}!loadP3@{loadP3}}
+\index{loadP3@{loadP3}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{loadP3()}{loadP3()}}
+{\footnotesize\ttfamily void Image\+::load\+P3 (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{is }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Load a {\bfseries{P3}} formatted image. 
+
+\mbox{\Hypertarget{class_image_ace2d772c87c18506d0320d2ee9e7feb8}\label{class_image_ace2d772c87c18506d0320d2ee9e7feb8}} 
+\index{Image@{Image}!loadP5@{loadP5}}
+\index{loadP5@{loadP5}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{loadP5()}{loadP5()}}
+{\footnotesize\ttfamily void Image\+::load\+P5 (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Load a {\bfseries{P5}} formatted image. 
+
+\mbox{\Hypertarget{class_image_af31a587ded24aeb54a02fe55c3e561f3}\label{class_image_af31a587ded24aeb54a02fe55c3e561f3}} 
+\index{Image@{Image}!loadP6@{loadP6}}
+\index{loadP6@{loadP6}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{loadP6()}{loadP6()}}
+{\footnotesize\ttfamily void Image\+::load\+P6 (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Load a {\bfseries{P6}} formatted image. 
+
+\mbox{\Hypertarget{class_image_a8cc121f7839f8b020bdd07b7351e7327}\label{class_image_a8cc121f7839f8b020bdd07b7351e7327}} 
+\index{Image@{Image}!monochrome@{monochrome}}
+\index{monochrome@{monochrome}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{monochrome()}{monochrome()}}
+{\footnotesize\ttfamily void Image\+::monochrome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Turns the current\+Img pixel values to black/white values. 
+
+\mbox{\Hypertarget{class_image_a83189ea453893d1a4e2eb34de984b660}\label{class_image_a83189ea453893d1a4e2eb34de984b660}} 
+\index{Image@{Image}!monochromeP2@{monochromeP2}}
+\index{monochromeP2@{monochromeP2}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{monochromeP2()}{monochromeP2()}}
+{\footnotesize\ttfamily void Image\+::monochrome\+P2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Turns an image with format {\bfseries{P2}} negative. 
+
+\mbox{\Hypertarget{class_image_a30447a348df039e3e6e44fb1875cd402}\label{class_image_a30447a348df039e3e6e44fb1875cd402}} 
+\index{Image@{Image}!monochromeP3@{monochromeP3}}
+\index{monochromeP3@{monochromeP3}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{monochromeP3()}{monochromeP3()}}
+{\footnotesize\ttfamily void Image\+::monochrome\+P3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Turns an image with format {\bfseries{P3}} negative. 
+
+\mbox{\Hypertarget{class_image_a86bcc8dc8183e21f0aab8ef2c7af4b88}\label{class_image_a86bcc8dc8183e21f0aab8ef2c7af4b88}} 
+\index{Image@{Image}!negative@{negative}}
+\index{negative@{negative}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{negative()}{negative()}}
+{\footnotesize\ttfamily void Image\+::negative (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Turns the current\+Img pixel values to inverse values. 
+
+\mbox{\Hypertarget{class_image_aca04c91b3821f8f1a315877a31b174da}\label{class_image_aca04c91b3821f8f1a315877a31b174da}} 
+\index{Image@{Image}!negativeP1@{negativeP1}}
+\index{negativeP1@{negativeP1}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{negativeP1()}{negativeP1()}}
+{\footnotesize\ttfamily void Image\+::negative\+P1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Turns an image with format {\bfseries{P1}} negative. 
+
+\mbox{\Hypertarget{class_image_aec09fe60470e382bb5d8beccdba6e5cc}\label{class_image_aec09fe60470e382bb5d8beccdba6e5cc}} 
+\index{Image@{Image}!negativeP2@{negativeP2}}
+\index{negativeP2@{negativeP2}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{negativeP2()}{negativeP2()}}
+{\footnotesize\ttfamily void Image\+::negative\+P2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Turns an image with format {\bfseries{P2}} negative. 
+
+\mbox{\Hypertarget{class_image_acc63cd190fca18a5df88349f7dce555c}\label{class_image_acc63cd190fca18a5df88349f7dce555c}} 
+\index{Image@{Image}!negativeP3@{negativeP3}}
+\index{negativeP3@{negativeP3}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{negativeP3()}{negativeP3()}}
+{\footnotesize\ttfamily void Image\+::negative\+P3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Turns an image with format {\bfseries{P3}} negative. 
+
+\mbox{\Hypertarget{class_image_ae2379b7f0c93169809b3b0de1d3046fc}\label{class_image_ae2379b7f0c93169809b3b0de1d3046fc}} 
+\index{Image@{Image}!print@{print}}
+\index{print@{print}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Image\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+a method made for debugging purposes. 
+
+\mbox{\Hypertarget{class_image_ad2a4032329c4f3b6043fc267c9d870ea}\label{class_image_ad2a4032329c4f3b6043fc267c9d870ea}} 
+\index{Image@{Image}!resetCurrentImage@{resetCurrentImage}}
+\index{resetCurrentImage@{resetCurrentImage}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{resetCurrentImage()}{resetCurrentImage()}}
+{\footnotesize\ttfamily void Image\+::reset\+Current\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets the current\+Img to the original\+Img and it\textquotesingle{}s with and height. 
+
+\mbox{\Hypertarget{class_image_ad9fb4fd4857b451e330bf37dcc6bc91d}\label{class_image_ad9fb4fd4857b451e330bf37dcc6bc91d}} 
+\index{Image@{Image}!rotateLeft@{rotateLeft}}
+\index{rotateLeft@{rotateLeft}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{rotateLeft()}{rotateLeft()}}
+{\footnotesize\ttfamily void Image\+::rotate\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Rotates the current\+Img to the left and also swaps current\+Width and current\+Height. 
+
+\mbox{\Hypertarget{class_image_a119e09b1addd48b535ddd20ff9c1f7c7}\label{class_image_a119e09b1addd48b535ddd20ff9c1f7c7}} 
+\index{Image@{Image}!rotateRight@{rotateRight}}
+\index{rotateRight@{rotateRight}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{rotateRight()}{rotateRight()}}
+{\footnotesize\ttfamily void Image\+::rotate\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Rotates the current\+Img to the right and also swaps current\+Width and current\+Height. 
+
+\mbox{\Hypertarget{class_image_a643d9f46961e8372b6a573246aad66d1}\label{class_image_a643d9f46961e8372b6a573246aad66d1}} 
+\index{Image@{Image}!save@{save}}
+\index{save@{save}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void Image\+::save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Saves the image depending on what format it is. 
+
+\mbox{\Hypertarget{class_image_a245549a4e56b23827474c630ca5b8c8c}\label{class_image_a245549a4e56b23827474c630ca5b8c8c}} 
+\index{Image@{Image}!saveP1@{saveP1}}
+\index{saveP1@{saveP1}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{saveP1()}{saveP1()}}
+{\footnotesize\ttfamily void Image\+::save\+P1 (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Save an image with format {\bfseries{P1}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & is the output file stream where the image will be saved. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_image_a44ad35979f98a8b5bdf146c1848f770e}\label{class_image_a44ad35979f98a8b5bdf146c1848f770e}} 
+\index{Image@{Image}!saveP2@{saveP2}}
+\index{saveP2@{saveP2}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{saveP2()}{saveP2()}}
+{\footnotesize\ttfamily void Image\+::save\+P2 (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Save an image with format {\bfseries{P2}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & is the output file stream where the image will be saved. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_image_a3ce3bda906712113c877548a19caa3c6}\label{class_image_a3ce3bda906712113c877548a19caa3c6}} 
+\index{Image@{Image}!saveP3@{saveP3}}
+\index{saveP3@{saveP3}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{saveP3()}{saveP3()}}
+{\footnotesize\ttfamily void Image\+::save\+P3 (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Save an image with format {\bfseries{P3}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & is the output file stream where the image will be saved. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_image_adfe184b7949468b99c0b919793b8f282}\label{class_image_adfe184b7949468b99c0b919793b8f282}} 
+\index{Image@{Image}!saveP5@{saveP5}}
+\index{saveP5@{saveP5}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{saveP5()}{saveP5()}}
+{\footnotesize\ttfamily void Image\+::save\+P5 (\begin{DoxyParamCaption}\item[{std\+::string \&}]{new\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Save an image with format {\bfseries{P5}} 
+
+\begin{DoxyNote}{Note}
+it is not consistent with \mbox{\hyperlink{class_image_a245549a4e56b23827474c630ca5b8c8c}{save\+P1()}},\mbox{\hyperlink{class_image_a44ad35979f98a8b5bdf146c1848f770e}{save\+P2()}},\mbox{\hyperlink{class_image_a3ce3bda906712113c877548a19caa3c6}{save\+P3()}}. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_image_a3e89d808f22eb3754bb73959b93a950d}\label{class_image_a3e89d808f22eb3754bb73959b93a950d}} 
+\index{Image@{Image}!saveP6@{saveP6}}
+\index{saveP6@{saveP6}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{saveP6()}{saveP6()}}
+{\footnotesize\ttfamily void Image\+::save\+P6 (\begin{DoxyParamCaption}\item[{std\+::string \&}]{new\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Save an image with format {\bfseries{P6}} 
+
+\begin{DoxyNote}{Note}
+it is not consistent with \mbox{\hyperlink{class_image_a245549a4e56b23827474c630ca5b8c8c}{save\+P1()}},\mbox{\hyperlink{class_image_a44ad35979f98a8b5bdf146c1848f770e}{save\+P2()}},\mbox{\hyperlink{class_image_a3ce3bda906712113c877548a19caa3c6}{save\+P3()}}. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_image_a31056dc58d240f3122000b33c1a33507}\label{class_image_a31056dc58d240f3122000b33c1a33507}} 
+\index{Image@{Image}!currentHeight@{currentHeight}}
+\index{currentHeight@{currentHeight}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{currentHeight}{currentHeight}}
+{\footnotesize\ttfamily int Image\+::current\+Height\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\texorpdfstring{$<$}{<}Stores the current image width. 
+
+Stores the current image height. \mbox{\Hypertarget{class_image_af3218236c785b09ebf6ddc94eea170c1}\label{class_image_af3218236c785b09ebf6ddc94eea170c1}} 
+\index{Image@{Image}!currentImg@{currentImg}}
+\index{currentImg@{currentImg}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{currentImg}{currentImg}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$\mbox{\hyperlink{struct_pixel}{Pixel}}$>$ $>$ Image\+::current\+Img\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This is a matrix which stores all the current image pixel data. 
+
+\mbox{\Hypertarget{class_image_ac35abac45ca717d84439716c9bd967e9}\label{class_image_ac35abac45ca717d84439716c9bd967e9}} 
+\index{Image@{Image}!currentWidth@{currentWidth}}
+\index{currentWidth@{currentWidth}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{currentWidth}{currentWidth}}
+{\footnotesize\ttfamily int Image\+::current\+Width\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_image_a9808a8b4b6d9b563f01c87b5946475d2}\label{class_image_a9808a8b4b6d9b563f01c87b5946475d2}} 
+\index{Image@{Image}!format@{format}}
+\index{format@{format}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{format}{format}}
+{\footnotesize\ttfamily std\+::string Image\+::format\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Holds the original image format ({\itshape P1,P2, ..etc.}). 
+
+\mbox{\Hypertarget{class_image_a51df43db420c9c0b57536cb2dd36de5c}\label{class_image_a51df43db420c9c0b57536cb2dd36de5c}} 
+\index{Image@{Image}!height@{height}}
+\index{height@{height}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int Image\+::height\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stored the height of the original image. 
+
+\mbox{\Hypertarget{class_image_a9c0a54104d04acb2e89b8668ee7f4ab5}\label{class_image_a9c0a54104d04acb2e89b8668ee7f4ab5}} 
+\index{Image@{Image}!isHorizontalCollage@{isHorizontalCollage}}
+\index{isHorizontalCollage@{isHorizontalCollage}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{isHorizontalCollage}{isHorizontalCollage}}
+{\footnotesize\ttfamily bool Image\+::is\+Horizontal\+Collage\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stores {\itshape bool} value if the \mbox{\hyperlink{class_image}{Image}} is a collage of two images. 
+
+\mbox{\Hypertarget{class_image_a2f2ec6a87553fa4bfb55793aaed1f5fa}\label{class_image_a2f2ec6a87553fa4bfb55793aaed1f5fa}} 
+\index{Image@{Image}!maxVal@{maxVal}}
+\index{maxVal@{maxVal}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{maxVal}{maxVal}}
+{\footnotesize\ttfamily int Image\+::max\+Val\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stores the max value of the image. 
+
+\mbox{\Hypertarget{class_image_a585b19982a77aa46d9ec25d980eb091d}\label{class_image_a585b19982a77aa46d9ec25d980eb091d}} 
+\index{Image@{Image}!originalImg@{originalImg}}
+\index{originalImg@{originalImg}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{originalImg}{originalImg}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$\mbox{\hyperlink{struct_pixel}{Pixel}}$>$ $>$ Image\+::original\+Img\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This is a matrix in which all the original image pixel data is stored. 
+
+\begin{DoxyNote}{Note}
+This matrix should be of const value since we don\textquotesingle{}t wont to change the original image. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_image_aec8a33f176362d146da8c058798ebbff}\label{class_image_aec8a33f176362d146da8c058798ebbff}} 
+\index{Image@{Image}!path@{path}}
+\index{path@{path}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily std\+::string Image\+::path\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stored the original image file path. 
+
+\mbox{\Hypertarget{class_image_ab8d12f635013c04159cd4d3d972bac88}\label{class_image_ab8d12f635013c04159cd4d3d972bac88}} 
+\index{Image@{Image}!width@{width}}
+\index{width@{width}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily int Image\+::width\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stored the width of the original image. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+hpp/\mbox{\hyperlink{_image_8hpp}{Image.\+hpp}}\item 
+cpp/\mbox{\hyperlink{_image_8cpp}{Image.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,129 @@
+\hypertarget{class_command}{}\doxysection{Command Class Reference}
+\label{class_command}\index{Command@{Command}}
+
+
+This class stores all the commands entered to transform the current image.  
+
+
+
+
+{\ttfamily \#include $<$Command.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_command_a9f87f11ad392ce4adbbec9d37bcffd08}{optimize\+Commands}} ()
+\begin{DoxyCompactList}\small\item\em Optimizes all the commands in order to make the least possible amount of transformations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_command_aaba5189a7e9de3c88a432e270b41d718}{add\+Command}} (const std\+::string \&text)
+\begin{DoxyCompactList}\small\item\em Adds the next command needed to be added. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_command_aec6daa31b134ef3fbd02bd8fa6a369b2}{undo}} ()
+\begin{DoxyCompactList}\small\item\em removes the last command and adds it to the {\itshape redo\+Commands} vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_command_a4158ba14940104bd2146181bd72ec077}{redo}} ()
+\begin{DoxyCompactList}\small\item\em removes the last redo command and adds it to the {\itshape commands} vector. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_command_a7a04c722ae73948718dab3f15b19b4f5}{get\+Commands}} () const
+\begin{DoxyCompactList}\small\item\em Getter that returns the {\itshape commands} vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_command_abfcb29122e159858948e92433bca5449}{commands}}
+\begin{DoxyCompactList}\small\item\em Stores all the current commands. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_command_a869fba8f3ff2ef0b1a7bd379fd972976}{redo\+Commands}}
+\begin{DoxyCompactList}\small\item\em Stores all the undone commands until another command is added. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class stores all the commands entered to transform the current image. 
+
+The command class is \char`\"{}paired\char`\"{} with the current image in the session \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_session_a199247509b68985cf0373aba74a304d9}{Session\+::img\+Commands}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_command_aaba5189a7e9de3c88a432e270b41d718}\label{class_command_aaba5189a7e9de3c88a432e270b41d718}} 
+\index{Command@{Command}!addCommand@{addCommand}}
+\index{addCommand@{addCommand}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{addCommand()}{addCommand()}}
+{\footnotesize\ttfamily void Command\+::add\+Command (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text }\end{DoxyParamCaption})}
+
+
+
+Adds the next command needed to be added. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & contains in {\itshape string} the command needed to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_command_a7a04c722ae73948718dab3f15b19b4f5}\label{class_command_a7a04c722ae73948718dab3f15b19b4f5}} 
+\index{Command@{Command}!getCommands@{getCommands}}
+\index{getCommands@{getCommands}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{getCommands()}{getCommands()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Command\+::get\+Commands (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter that returns the {\itshape commands} vector. 
+
+\mbox{\Hypertarget{class_command_a9f87f11ad392ce4adbbec9d37bcffd08}\label{class_command_a9f87f11ad392ce4adbbec9d37bcffd08}} 
+\index{Command@{Command}!optimizeCommands@{optimizeCommands}}
+\index{optimizeCommands@{optimizeCommands}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{optimizeCommands()}{optimizeCommands()}}
+{\footnotesize\ttfamily void Command\+::optimize\+Commands (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Optimizes all the commands in order to make the least possible amount of transformations. 
+
+\begin{DoxyAttention}{Attention}
+This method {\bfseries{DOESN\textquotesingle{}T}} work. 
+\end{DoxyAttention}
+\mbox{\Hypertarget{class_command_a4158ba14940104bd2146181bd72ec077}\label{class_command_a4158ba14940104bd2146181bd72ec077}} 
+\index{Command@{Command}!redo@{redo}}
+\index{redo@{redo}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{redo()}{redo()}}
+{\footnotesize\ttfamily void Command\+::redo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+removes the last redo command and adds it to the {\itshape commands} vector. 
+
+\mbox{\Hypertarget{class_command_aec6daa31b134ef3fbd02bd8fa6a369b2}\label{class_command_aec6daa31b134ef3fbd02bd8fa6a369b2}} 
+\index{Command@{Command}!undo@{undo}}
+\index{undo@{undo}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{undo()}{undo()}}
+{\footnotesize\ttfamily void Command\+::undo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+removes the last command and adds it to the {\itshape redo\+Commands} vector. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_command_abfcb29122e159858948e92433bca5449}\label{class_command_abfcb29122e159858948e92433bca5449}} 
+\index{Command@{Command}!commands@{commands}}
+\index{commands@{commands}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{commands}{commands}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Command\+::commands\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stores all the current commands. 
+
+\mbox{\Hypertarget{class_command_a869fba8f3ff2ef0b1a7bd379fd972976}\label{class_command_a869fba8f3ff2ef0b1a7bd379fd972976}} 
+\index{Command@{Command}!redoCommands@{redoCommands}}
+\index{redoCommands@{redoCommands}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{redoCommands}{redoCommands}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Command\+::redo\+Commands\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stores all the undone commands until another command is added. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+hpp/\mbox{\hyperlink{_command_8hpp}{Command.\+hpp}}\item 
+cpp/\mbox{\hyperlink{_command_8cpp}{Command.\+cpp}}\end{DoxyCompactItemize}

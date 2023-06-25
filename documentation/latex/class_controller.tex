@@ -1,0 +1,394 @@
+\hypertarget{class_controller}{}\doxysection{Controller Class Reference}
+\label{class_controller}\index{Controller@{Controller}}
+
+
+\mbox{\hyperlink{class_controller}{Controller}} class.  
+
+
+
+
+{\ttfamily \#include $<$Controller.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_controller_a95c56822d667e94b031451729ce069a9}{Controller}} ()
+\begin{DoxyCompactList}\small\item\em Constructor to the \mbox{\hyperlink{class_controller}{Controller}} class. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_controller_a7cc1831a606f700950c447c435090469}{get\+Stop\+Flag}} () const
+\begin{DoxyCompactList}\small\item\em Method that returns a {\itshape bool} depending if the process should be stoped or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_controller_af8fc1ca0f62d61f0c76a69ef53d09162}{to\+Lower\+Case}} (std\+::string \&input)
+\begin{DoxyCompactList}\small\item\em This is a private method that has the purpose to turn to lowercase all the commands entered through the console. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_controller_adcba262ac337dfd7da01841fcb532c6b}{has\+Initialized\+Session}} ()
+\begin{DoxyCompactList}\small\item\em Returns a {\itshape bool} value depending on weather there are any loaded sessions. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_controller_adcf9b12f3b556790d8110027239b54e2}{load}} (std\+::vector$<$ std\+::string $>$ \&outputs)
+\item 
+void \mbox{\hyperlink{class_controller_aef00551c0dc87fc343c112d07e1422bf}{add}} (std\+::string path)
+\item 
+void \mbox{\hyperlink{class_controller_a1a0c5d6529e3ccd1344db57eba719fd7}{grayscale}} ()
+\begin{DoxyCompactList}\small\item\em Enters the command {\itshape grayscale} in the current session commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controller_a7989ceb6598ac81401e1cbe90974105f}{monochrome}} ()
+\begin{DoxyCompactList}\small\item\em Enters the commands {\itshape monochrome} in the current session commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controller_a729d40df5804ddc06f1e00a8c995f01e}{negative}} ()
+\begin{DoxyCompactList}\small\item\em Enters the commands {\itshape negative} in the current session commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controller_ad34787b4f90cc53df6667d13504246a6}{rotate\+Left}} ()
+\begin{DoxyCompactList}\small\item\em Enters the commands {\itshape rotate\+\_\+left} in the current session commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controller_a1228ae98a2810a88ff63a7c28b08e8ff}{rotate\+Right}} ()
+\begin{DoxyCompactList}\small\item\em Enters the commands {\itshape rotate\+\_\+right} in the current session commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controller_a49c36ada40d4e0c149acc51a7e70f510}{flip\+Top}} ()
+\begin{DoxyCompactList}\small\item\em Enters the commands {\itshape flip\+\_\+horizontal} in the current session commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controller_a4f932942de869894bd8a2c3f6f2e3667}{flip\+Left}} ()
+\begin{DoxyCompactList}\small\item\em Enters the commands {\itshape flip\+\_\+vertical} in the current session commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controller_a52b8812ceca0b4368dea2e2b4399d860}{undo}} ()
+\begin{DoxyCompactList}\small\item\em Removes the last command in the current session commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controller_aeb55fe16b48f14b00c179e95a0372a17}{redo}} ()
+\begin{DoxyCompactList}\small\item\em Undoes the removal of the last command in the current session. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controller_ae0f9dec048daf5dfdd42b82072ac6185}{save}} ()
+\begin{DoxyCompactList}\small\item\em Saves the Images in the current session. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controller_a9fc280b1a4ac93334395884b6648dc75}{crop}} (int x\+Beg, int y\+Beg, int x\+End, int y\+End)
+\begin{DoxyCompactList}\small\item\em Crops an image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controller_ad7ecc053ab0989d65a78b2215919671e}{make\+Collage\+Horizontal}} (const std\+::string \&path1, const std\+::string \&path2)
+\begin{DoxyCompactList}\small\item\em Makes a horizontal collage with to images. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controller_ab6e602af2fbbab38aa862b409755df57}{make\+Collage\+Vertical}} (const std\+::string \&path1, const std\+::string \&path2)
+\begin{DoxyCompactList}\small\item\em Makes a vertical collage with to images. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controller_a490d2c2117cb6da2c556edda33f79109}{list\+Session}} ()
+\begin{DoxyCompactList}\small\item\em In the console returns all the currently used images. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controller_a8a82d834cb412ce01293376cf6436d0a}{switch\+Session}} (size\+\_\+t ses\+Num)
+\begin{DoxyCompactList}\small\item\em Switches the currently used session to the one you {\itshape desire}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controller_abb951abd63b7bb6dcd04fff7299a5d37}{exit}} ()
+\begin{DoxyCompactList}\small\item\em raises the stop\+Flag and terminates the programme. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_session}{Session}} $>$ \mbox{\hyperlink{class_controller_aae5edf8fee98620552c9625d96effb33}{sessions}}
+\begin{DoxyCompactList}\small\item\em This stores all the sessions during use. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_controller_aa426c46413d5d02d3f68f5391641d6c7}{size}}
+\begin{DoxyCompactList}\small\item\em This stores the amount of sessions available. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_controller_ad7ed166f70f80f00f3b7e1d9f57d689d}{current\+Session}}
+\begin{DoxyCompactList}\small\item\em Stores the current session in use. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_controller_afed71a5d66df3f4e7d8766d313d60be8}{stop\+Flag}}
+\begin{DoxyCompactList}\small\item\em Contains a bool value if the programme should be terminated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::istream \& \mbox{\hyperlink{class_controller_a51db5d5c75ecec71712b17533f06a143}{operator$>$$>$}} (std\+::istream \&input, \mbox{\hyperlink{class_controller}{Controller}} \&ctr)
+\begin{DoxyCompactList}\small\item\em All commands are entered through this operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_controller}{Controller}} class. 
+
+
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{class_command}{Command}} Input
+\end{DoxyItemize}
+
+The controller class is responsible for reading commands from the console and forward them to the other classes in order to implement the said command. This class could maybe be made a singleton. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_controller_a95c56822d667e94b031451729ce069a9}\label{class_controller_a95c56822d667e94b031451729ce069a9}} 
+\index{Controller@{Controller}!Controller@{Controller}}
+\index{Controller@{Controller}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{Controller()}{Controller()}}
+{\footnotesize\ttfamily Controller\+::\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor to the \mbox{\hyperlink{class_controller}{Controller}} class. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_controller_aef00551c0dc87fc343c112d07e1422bf}\label{class_controller_aef00551c0dc87fc343c112d07e1422bf}} 
+\index{Controller@{Controller}!add@{add}}
+\index{add@{add}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Controller\+::add (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & takes the path to the image you want to add in the current session. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_controller_a9fc280b1a4ac93334395884b6648dc75}\label{class_controller_a9fc280b1a4ac93334395884b6648dc75}} 
+\index{Controller@{Controller}!crop@{crop}}
+\index{crop@{crop}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{crop()}{crop()}}
+{\footnotesize\ttfamily void Controller\+::crop (\begin{DoxyParamCaption}\item[{int}]{x\+Beg,  }\item[{int}]{y\+Beg,  }\item[{int}]{x\+End,  }\item[{int}]{y\+End }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Crops an image. 
+
+\begin{DoxyAttention}{Attention}
+This method {\bfseries{DOESN\textquotesingle{}T}} work. 
+\end{DoxyAttention}
+\mbox{\Hypertarget{class_controller_abb951abd63b7bb6dcd04fff7299a5d37}\label{class_controller_abb951abd63b7bb6dcd04fff7299a5d37}} 
+\index{Controller@{Controller}!exit@{exit}}
+\index{exit@{exit}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily void Controller\+::exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+raises the stop\+Flag and terminates the programme. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_controller_afed71a5d66df3f4e7d8766d313d60be8}{stop\+Flag}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_controller_a4f932942de869894bd8a2c3f6f2e3667}\label{class_controller_a4f932942de869894bd8a2c3f6f2e3667}} 
+\index{Controller@{Controller}!flipLeft@{flipLeft}}
+\index{flipLeft@{flipLeft}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{flipLeft()}{flipLeft()}}
+{\footnotesize\ttfamily void Controller\+::flip\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Enters the commands {\itshape flip\+\_\+vertical} in the current session commands. 
+
+\mbox{\Hypertarget{class_controller_a49c36ada40d4e0c149acc51a7e70f510}\label{class_controller_a49c36ada40d4e0c149acc51a7e70f510}} 
+\index{Controller@{Controller}!flipTop@{flipTop}}
+\index{flipTop@{flipTop}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{flipTop()}{flipTop()}}
+{\footnotesize\ttfamily void Controller\+::flip\+Top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Enters the commands {\itshape flip\+\_\+horizontal} in the current session commands. 
+
+\mbox{\Hypertarget{class_controller_a7cc1831a606f700950c447c435090469}\label{class_controller_a7cc1831a606f700950c447c435090469}} 
+\index{Controller@{Controller}!getStopFlag@{getStopFlag}}
+\index{getStopFlag@{getStopFlag}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{getStopFlag()}{getStopFlag()}}
+{\footnotesize\ttfamily bool Controller\+::get\+Stop\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method that returns a {\itshape bool} depending if the process should be stoped or not. 
+
+\mbox{\Hypertarget{class_controller_a1a0c5d6529e3ccd1344db57eba719fd7}\label{class_controller_a1a0c5d6529e3ccd1344db57eba719fd7}} 
+\index{Controller@{Controller}!grayscale@{grayscale}}
+\index{grayscale@{grayscale}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{grayscale()}{grayscale()}}
+{\footnotesize\ttfamily void Controller\+::grayscale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Enters the command {\itshape grayscale} in the current session commands. 
+
+\mbox{\Hypertarget{class_controller_adcba262ac337dfd7da01841fcb532c6b}\label{class_controller_adcba262ac337dfd7da01841fcb532c6b}} 
+\index{Controller@{Controller}!hasInitializedSession@{hasInitializedSession}}
+\index{hasInitializedSession@{hasInitializedSession}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{hasInitializedSession()}{hasInitializedSession()}}
+{\footnotesize\ttfamily bool Controller\+::has\+Initialized\+Session (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Returns a {\itshape bool} value depending on weather there are any loaded sessions. 
+
+\mbox{\Hypertarget{class_controller_a490d2c2117cb6da2c556edda33f79109}\label{class_controller_a490d2c2117cb6da2c556edda33f79109}} 
+\index{Controller@{Controller}!listSession@{listSession}}
+\index{listSession@{listSession}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{listSession()}{listSession()}}
+{\footnotesize\ttfamily void Controller\+::list\+Session (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+In the console returns all the currently used images. 
+
+\mbox{\Hypertarget{class_controller_adcf9b12f3b556790d8110027239b54e2}\label{class_controller_adcf9b12f3b556790d8110027239b54e2}} 
+\index{Controller@{Controller}!load@{load}}
+\index{load@{load}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily bool Controller\+::load (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$ \&}]{outputs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_controller_ad7ecc053ab0989d65a78b2215919671e}\label{class_controller_ad7ecc053ab0989d65a78b2215919671e}} 
+\index{Controller@{Controller}!makeCollageHorizontal@{makeCollageHorizontal}}
+\index{makeCollageHorizontal@{makeCollageHorizontal}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{makeCollageHorizontal()}{makeCollageHorizontal()}}
+{\footnotesize\ttfamily void Controller\+::make\+Collage\+Horizontal (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path1,  }\item[{const std\+::string \&}]{path2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Makes a horizontal collage with to images. 
+
+\begin{DoxyAttention}{Attention}
+This method {\bfseries{DOESN\textquotesingle{}T}} work! 
+\end{DoxyAttention}
+\mbox{\Hypertarget{class_controller_ab6e602af2fbbab38aa862b409755df57}\label{class_controller_ab6e602af2fbbab38aa862b409755df57}} 
+\index{Controller@{Controller}!makeCollageVertical@{makeCollageVertical}}
+\index{makeCollageVertical@{makeCollageVertical}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{makeCollageVertical()}{makeCollageVertical()}}
+{\footnotesize\ttfamily void Controller\+::make\+Collage\+Vertical (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path1,  }\item[{const std\+::string \&}]{path2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Makes a vertical collage with to images. 
+
+\begin{DoxyAttention}{Attention}
+This method {\bfseries{DOESN\textquotesingle{}T}} work! 
+\end{DoxyAttention}
+\mbox{\Hypertarget{class_controller_a7989ceb6598ac81401e1cbe90974105f}\label{class_controller_a7989ceb6598ac81401e1cbe90974105f}} 
+\index{Controller@{Controller}!monochrome@{monochrome}}
+\index{monochrome@{monochrome}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{monochrome()}{monochrome()}}
+{\footnotesize\ttfamily void Controller\+::monochrome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Enters the commands {\itshape monochrome} in the current session commands. 
+
+\mbox{\Hypertarget{class_controller_a729d40df5804ddc06f1e00a8c995f01e}\label{class_controller_a729d40df5804ddc06f1e00a8c995f01e}} 
+\index{Controller@{Controller}!negative@{negative}}
+\index{negative@{negative}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{negative()}{negative()}}
+{\footnotesize\ttfamily void Controller\+::negative (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Enters the commands {\itshape negative} in the current session commands. 
+
+\mbox{\Hypertarget{class_controller_aeb55fe16b48f14b00c179e95a0372a17}\label{class_controller_aeb55fe16b48f14b00c179e95a0372a17}} 
+\index{Controller@{Controller}!redo@{redo}}
+\index{redo@{redo}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{redo()}{redo()}}
+{\footnotesize\ttfamily void Controller\+::redo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Undoes the removal of the last command in the current session. 
+
+\mbox{\Hypertarget{class_controller_ad34787b4f90cc53df6667d13504246a6}\label{class_controller_ad34787b4f90cc53df6667d13504246a6}} 
+\index{Controller@{Controller}!rotateLeft@{rotateLeft}}
+\index{rotateLeft@{rotateLeft}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{rotateLeft()}{rotateLeft()}}
+{\footnotesize\ttfamily void Controller\+::rotate\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Enters the commands {\itshape rotate\+\_\+left} in the current session commands. 
+
+\mbox{\Hypertarget{class_controller_a1228ae98a2810a88ff63a7c28b08e8ff}\label{class_controller_a1228ae98a2810a88ff63a7c28b08e8ff}} 
+\index{Controller@{Controller}!rotateRight@{rotateRight}}
+\index{rotateRight@{rotateRight}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{rotateRight()}{rotateRight()}}
+{\footnotesize\ttfamily void Controller\+::rotate\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Enters the commands {\itshape rotate\+\_\+right} in the current session commands. 
+
+\mbox{\Hypertarget{class_controller_ae0f9dec048daf5dfdd42b82072ac6185}\label{class_controller_ae0f9dec048daf5dfdd42b82072ac6185}} 
+\index{Controller@{Controller}!save@{save}}
+\index{save@{save}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void Controller\+::save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Saves the Images in the current session. 
+
+\mbox{\Hypertarget{class_controller_a8a82d834cb412ce01293376cf6436d0a}\label{class_controller_a8a82d834cb412ce01293376cf6436d0a}} 
+\index{Controller@{Controller}!switchSession@{switchSession}}
+\index{switchSession@{switchSession}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{switchSession()}{switchSession()}}
+{\footnotesize\ttfamily void Controller\+::switch\+Session (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{ses\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Switches the currently used session to the one you {\itshape desire}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ses\+Num} & the session ID you want to enter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_controller_af8fc1ca0f62d61f0c76a69ef53d09162}\label{class_controller_af8fc1ca0f62d61f0c76a69ef53d09162}} 
+\index{Controller@{Controller}!toLowerCase@{toLowerCase}}
+\index{toLowerCase@{toLowerCase}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{toLowerCase()}{toLowerCase()}}
+{\footnotesize\ttfamily void Controller\+::to\+Lower\+Case (\begin{DoxyParamCaption}\item[{std\+::string \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This is a private method that has the purpose to turn to lowercase all the commands entered through the console. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & is a refrence to the string of the command needed to be lowercased \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_controller_a52b8812ceca0b4368dea2e2b4399d860}\label{class_controller_a52b8812ceca0b4368dea2e2b4399d860}} 
+\index{Controller@{Controller}!undo@{undo}}
+\index{undo@{undo}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{undo()}{undo()}}
+{\footnotesize\ttfamily void Controller\+::undo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Removes the last command in the current session commands. 
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_controller_a51db5d5c75ecec71712b17533f06a143}\label{class_controller_a51db5d5c75ecec71712b17533f06a143}} 
+\index{Controller@{Controller}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{input,  }\item[{\mbox{\hyperlink{class_controller}{Controller}} \&}]{ctr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+All commands are entered through this operator. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_controller_ad7ed166f70f80f00f3b7e1d9f57d689d}\label{class_controller_ad7ed166f70f80f00f3b7e1d9f57d689d}} 
+\index{Controller@{Controller}!currentSession@{currentSession}}
+\index{currentSession@{currentSession}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{currentSession}{currentSession}}
+{\footnotesize\ttfamily size\+\_\+t Controller\+::current\+Session\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stores the current session in use. 
+
+\mbox{\Hypertarget{class_controller_aae5edf8fee98620552c9625d96effb33}\label{class_controller_aae5edf8fee98620552c9625d96effb33}} 
+\index{Controller@{Controller}!sessions@{sessions}}
+\index{sessions@{sessions}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{sessions}{sessions}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_session}{Session}}$>$ Controller\+::sessions\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This stores all the sessions during use. 
+
+\mbox{\Hypertarget{class_controller_aa426c46413d5d02d3f68f5391641d6c7}\label{class_controller_aa426c46413d5d02d3f68f5391641d6c7}} 
+\index{Controller@{Controller}!size@{size}}
+\index{size@{size}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily size\+\_\+t Controller\+::size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This stores the amount of sessions available. 
+
+\mbox{\Hypertarget{class_controller_afed71a5d66df3f4e7d8766d313d60be8}\label{class_controller_afed71a5d66df3f4e7d8766d313d60be8}} 
+\index{Controller@{Controller}!stopFlag@{stopFlag}}
+\index{stopFlag@{stopFlag}!Controller@{Controller}}
+\doxysubsubsection{\texorpdfstring{stopFlag}{stopFlag}}
+{\footnotesize\ttfamily bool Controller\+::stop\+Flag\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Contains a bool value if the programme should be terminated. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+hpp/\mbox{\hyperlink{_controller_8hpp}{Controller.\+hpp}}\item 
+cpp/\mbox{\hyperlink{_controller_8cpp}{Controller.\+cpp}}\end{DoxyCompactItemize}

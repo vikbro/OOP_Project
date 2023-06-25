@@ -1,0 +1,29 @@
+\hypertarget{_command_8hpp_source}{}\doxysection{Command.\+hpp}
+\label{_command_8hpp_source}\index{hpp/Command.hpp@{hpp/Command.hpp}}
+\mbox{\hyperlink{_command_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef OOP\_PROJECT\_COMMAND\_HPP}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define OOP\_PROJECT\_COMMAND\_HPP}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_command}{Command}} \{}
+\DoxyCodeLine{15 \textcolor{keyword}{private}:}
+\DoxyCodeLine{16     std::vector<std::string> \mbox{\hyperlink{class_command_abfcb29122e159858948e92433bca5449}{commands}}; }
+\DoxyCodeLine{17     std::vector<std::string> \mbox{\hyperlink{class_command_a869fba8f3ff2ef0b1a7bd379fd972976}{redoCommands}}; }
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_command_a9f87f11ad392ce4adbbec9d37bcffd08}{optimizeCommands}}();}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_command_aaba5189a7e9de3c88a432e270b41d718}{addCommand}}(\textcolor{keyword}{const} std::string \&text);}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_command_aec6daa31b134ef3fbd02bd8fa6a369b2}{undo}}();}
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_command_a4158ba14940104bd2146181bd72ec077}{redo}}();}
+\DoxyCodeLine{32     std::vector<std::string> \mbox{\hyperlink{class_command_a7a04c722ae73948718dab3f15b19b4f5}{getCommands}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{33 \};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//OOP\_PROJECT\_COMMAND\_HPP}}
+
+\end{DoxyCode}

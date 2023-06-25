@@ -1,0 +1,128 @@
+\hypertarget{struct_pixel}{}\doxysection{Pixel Struct Reference}
+\label{struct_pixel}\index{Pixel@{Pixel}}
+
+
+A structure that stores pixel values.  
+
+
+
+
+{\ttfamily \#include $<$Pixel.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_pixel_a27ad99a2f705e635c42d242d530d4756}{Pixel}} ()
+\item 
+\mbox{\hyperlink{struct_pixel_a351173738a791a6efd35a3f184fe80ac}{Pixel}} (bool val)
+\begin{DoxyCompactList}\small\item\em A constructor that is used if the image is binary ($\ast$.pbm$\ast$) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_pixel_abc137ad7b60750ce0d2bf868e2ff31fd}{Pixel}} (int val)
+\begin{DoxyCompactList}\small\item\em A constructor that is used if the image is gray ($\ast$.pgm$\ast$) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_pixel_adfa0de4174bfeb35bf1a9060a5bb7628}{Pixel}} (int \mbox{\hyperlink{struct_pixel_a45979ed518bb5111629172944b027ad9}{val1}}, int \mbox{\hyperlink{struct_pixel_a2c9dab9fc6262fb1341e96c74764d058}{val2}}, int \mbox{\hyperlink{struct_pixel_adf98ed43decc6cf49a89e08db88caf89}{val3}})
+\begin{DoxyCompactList}\small\item\em A constructor that is used if the image is RGB ($\ast$.ppm$\ast$) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_pixel_a3a27d708bc66dc2fb50575b95ea63211}{val0}}
+\begin{DoxyCompactList}\small\item\em Stores the binary value of a Binary \mbox{\hyperlink{struct_pixel}{Pixel}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_pixel_a45979ed518bb5111629172944b027ad9}{val1}}
+\begin{DoxyCompactList}\small\item\em Stores the {\bfseries{Red}} value of pixel and {\bfseries{Gray}} value. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_pixel_a2c9dab9fc6262fb1341e96c74764d058}{val2}}
+\begin{DoxyCompactList}\small\item\em Stores {\bfseries{Green}} value of pixel. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_pixel_adf98ed43decc6cf49a89e08db88caf89}{val3}}
+\begin{DoxyCompactList}\small\item\em Stores {\bfseries{Blue}} value of pixel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A structure that stores pixel values. 
+
+Even though all the elements are public they are private in the \mbox{\hyperlink{class_image}{Image}} class 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_pixel_a27ad99a2f705e635c42d242d530d4756}\label{struct_pixel_a27ad99a2f705e635c42d242d530d4756}} 
+\index{Pixel@{Pixel}!Pixel@{Pixel}}
+\index{Pixel@{Pixel}!Pixel@{Pixel}}
+\doxysubsubsection{\texorpdfstring{Pixel()}{Pixel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Pixel\+::\+Pixel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_pixel_a351173738a791a6efd35a3f184fe80ac}\label{struct_pixel_a351173738a791a6efd35a3f184fe80ac}} 
+\index{Pixel@{Pixel}!Pixel@{Pixel}}
+\index{Pixel@{Pixel}!Pixel@{Pixel}}
+\doxysubsubsection{\texorpdfstring{Pixel()}{Pixel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Pixel\+::\+Pixel (\begin{DoxyParamCaption}\item[{bool}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A constructor that is used if the image is binary ($\ast$.pbm$\ast$) 
+
+\mbox{\Hypertarget{struct_pixel_abc137ad7b60750ce0d2bf868e2ff31fd}\label{struct_pixel_abc137ad7b60750ce0d2bf868e2ff31fd}} 
+\index{Pixel@{Pixel}!Pixel@{Pixel}}
+\index{Pixel@{Pixel}!Pixel@{Pixel}}
+\doxysubsubsection{\texorpdfstring{Pixel()}{Pixel()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Pixel\+::\+Pixel (\begin{DoxyParamCaption}\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A constructor that is used if the image is gray ($\ast$.pgm$\ast$) 
+
+\mbox{\Hypertarget{struct_pixel_adfa0de4174bfeb35bf1a9060a5bb7628}\label{struct_pixel_adfa0de4174bfeb35bf1a9060a5bb7628}} 
+\index{Pixel@{Pixel}!Pixel@{Pixel}}
+\index{Pixel@{Pixel}!Pixel@{Pixel}}
+\doxysubsubsection{\texorpdfstring{Pixel()}{Pixel()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Pixel\+::\+Pixel (\begin{DoxyParamCaption}\item[{int}]{val1,  }\item[{int}]{val2,  }\item[{int}]{val3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A constructor that is used if the image is RGB ($\ast$.ppm$\ast$) 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_pixel_a3a27d708bc66dc2fb50575b95ea63211}\label{struct_pixel_a3a27d708bc66dc2fb50575b95ea63211}} 
+\index{Pixel@{Pixel}!val0@{val0}}
+\index{val0@{val0}!Pixel@{Pixel}}
+\doxysubsubsection{\texorpdfstring{val0}{val0}}
+{\footnotesize\ttfamily bool Pixel\+::val0}
+
+
+
+Stores the binary value of a Binary \mbox{\hyperlink{struct_pixel}{Pixel}}. 
+
+\mbox{\Hypertarget{struct_pixel_a45979ed518bb5111629172944b027ad9}\label{struct_pixel_a45979ed518bb5111629172944b027ad9}} 
+\index{Pixel@{Pixel}!val1@{val1}}
+\index{val1@{val1}!Pixel@{Pixel}}
+\doxysubsubsection{\texorpdfstring{val1}{val1}}
+{\footnotesize\ttfamily int Pixel\+::val1}
+
+
+
+Stores the {\bfseries{Red}} value of pixel and {\bfseries{Gray}} value. 
+
+\begin{DoxyNote}{Note}
+This member has a double purpose 
+\end{DoxyNote}
+\mbox{\Hypertarget{struct_pixel_a2c9dab9fc6262fb1341e96c74764d058}\label{struct_pixel_a2c9dab9fc6262fb1341e96c74764d058}} 
+\index{Pixel@{Pixel}!val2@{val2}}
+\index{val2@{val2}!Pixel@{Pixel}}
+\doxysubsubsection{\texorpdfstring{val2}{val2}}
+{\footnotesize\ttfamily int Pixel\+::val2}
+
+
+
+Stores {\bfseries{Green}} value of pixel. 
+
+\mbox{\Hypertarget{struct_pixel_adf98ed43decc6cf49a89e08db88caf89}\label{struct_pixel_adf98ed43decc6cf49a89e08db88caf89}} 
+\index{Pixel@{Pixel}!val3@{val3}}
+\index{val3@{val3}!Pixel@{Pixel}}
+\doxysubsubsection{\texorpdfstring{val3}{val3}}
+{\footnotesize\ttfamily int Pixel\+::val3}
+
+
+
+Stores {\bfseries{Blue}} value of pixel. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+hpp/\mbox{\hyperlink{_pixel_8hpp}{Pixel.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,128 @@
+\hypertarget{_image_8hpp_source}{}\doxysection{Image.\+hpp}
+\label{_image_8hpp_source}\index{hpp/Image.hpp@{hpp/Image.hpp}}
+\mbox{\hyperlink{_image_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef OOP\_PROJECT\_IMAGE\_HPP}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define OOP\_PROJECT\_IMAGE\_HPP}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <ctime>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_pixel_8hpp}{Pixel.hpp}}"{}}}
+\DoxyCodeLine{11 \textcolor{comment}{//\#include "{}Commands.hpp"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{class_image}{Image}} \{}
+\DoxyCodeLine{18 \textcolor{keyword}{private}:}
+\DoxyCodeLine{19     \textcolor{comment}{// could be const?}}
+\DoxyCodeLine{20     std::vector<std::vector<Pixel>> \mbox{\hyperlink{class_image_a585b19982a77aa46d9ec25d980eb091d}{originalImg}}; }
+\DoxyCodeLine{22     std::vector<std::vector<Pixel>> \mbox{\hyperlink{class_image_af3218236c785b09ebf6ddc94eea170c1}{currentImg}}; }
+\DoxyCodeLine{23     std::string \mbox{\hyperlink{class_image_a9808a8b4b6d9b563f01c87b5946475d2}{format}}; }
+\DoxyCodeLine{24     std::string \mbox{\hyperlink{class_image_aec8a33f176362d146da8c058798ebbff}{path}}; }
+\DoxyCodeLine{25     \textcolor{comment}{// could be const?}}
+\DoxyCodeLine{26     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_image_ab8d12f635013c04159cd4d3d972bac88}{width}}; }
+\DoxyCodeLine{27     \textcolor{comment}{// could be const?}}
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_image_a51df43db420c9c0b57536cb2dd36de5c}{height}}; }
+\DoxyCodeLine{29     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_image_ac35abac45ca717d84439716c9bd967e9}{currentWidth}}; }
+\DoxyCodeLine{30     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_image_a31056dc58d240f3122000b33c1a33507}{currentHeight}}; }
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_image_a2f2ec6a87553fa4bfb55793aaed1f5fa}{maxVal}}; }
+\DoxyCodeLine{32 \textcolor{comment}{//    TODO}}
+\DoxyCodeLine{33     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_image_a9c0a54104d04acb2e89b8668ee7f4ab5}{isHorizontalCollage}}; }
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{keyword}{public}:}
+\DoxyCodeLine{40     \mbox{\hyperlink{class_image_a910ae06464143720b7b77990a1d59734}{Image}}(\textcolor{keyword}{const} std::string \&\mbox{\hyperlink{class_image_aec8a33f176362d146da8c058798ebbff}{path}});}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{46     \mbox{\hyperlink{class_image_a910ae06464143720b7b77990a1d59734}{Image}}(\textcolor{keyword}{const} std::string \&path1, \textcolor{keyword}{const} std::string \&path2, \textcolor{keywordtype}{bool} is);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{49     \mbox{\hyperlink{class_image_a0294f63700543e11c0f0da85601c7ae5}{\string~Image}}();}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{keyword}{public}:}
+\DoxyCodeLine{52 \textcolor{comment}{//    const std::vector<std::vector<Pixel>> \&getOriginalImg() const;}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \textcolor{comment}{//    const std::vector<std::vector<Pixel>> \&getCurrentImg() const;}}
+\DoxyCodeLine{56 \textcolor{comment}{}    \textcolor{keyword}{const} std::string \&\mbox{\hyperlink{class_image_a04f5d29842ecbff2da2afc5ff6405e7c}{getFormat}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{58     \textcolor{keyword}{const} std::string \&\mbox{\hyperlink{class_image_a6db552d0133cd5efbadd297261f43745}{getPath}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{59 \textcolor{comment}{//}}
+\DoxyCodeLine{60 \textcolor{comment}{//    int getCurrentWidth() const;}}
+\DoxyCodeLine{61 \textcolor{comment}{//}}
+\DoxyCodeLine{62 \textcolor{comment}{//    int getCurrentHeight() const;}}
+\DoxyCodeLine{63 \textcolor{comment}{//}}
+\DoxyCodeLine{64 \textcolor{comment}{//    int getMaxVal() const;}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{keyword}{private}:}
+\DoxyCodeLine{69     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_af3826c2f78c8498e9c56661dba05437a}{loadHeader}}(std::ifstream \&);}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_a445de53013dfb1555314d2bb9b846e8b}{getComment}}(std::ifstream \&) \textcolor{keyword}{const};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{74     std::string \mbox{\hyperlink{class_image_ad51519ad12bf978978d6767381beec22}{getNewPath}}();}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{77     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_a3c4ca45f5caf55e7af10dc28c5c4c595}{loadP1}}(std::ifstream \&);}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{80     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_af9480aad1b308dbdcd76e73966658205}{loadP2}}(std::ifstream \&);}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{83     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_a1fdcb243841a9037fac1dd43e4634a06}{loadP3}}(std::ifstream \&);}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 \textcolor{comment}{//    void loadP4(std::ifstream\&);}}
+\DoxyCodeLine{87 \textcolor{comment}{}    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_ace2d772c87c18506d0320d2ee9e7feb8}{loadP5}}(std::ifstream \&);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{90     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_af31a587ded24aeb54a02fe55c3e561f3}{loadP6}}(std::ifstream \&);}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{94     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_a245549a4e56b23827474c630ca5b8c8c}{saveP1}}(std::ofstream \&out);}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{98     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_a44ad35979f98a8b5bdf146c1848f770e}{saveP2}}(std::ofstream \&out);}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{102     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_a3ce3bda906712113c877548a19caa3c6}{saveP3}}(std::ofstream \&out);}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104 \textcolor{comment}{//    void saveP4(std::string\& newPath);}}
+\DoxyCodeLine{107 \textcolor{comment}{}    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_adfe184b7949468b99c0b919793b8f282}{saveP5}}(std::string \&newPath);}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_a3e89d808f22eb3754bb73959b93a950d}{saveP6}}(std::string \&newPath);}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{115     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_aca04c91b3821f8f1a315877a31b174da}{negativeP1}}();}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{118     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_aec09fe60470e382bb5d8beccdba6e5cc}{negativeP2}}();}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{121     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_acc63cd190fca18a5df88349f7dce555c}{negativeP3}}();}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_a83189ea453893d1a4e2eb34de984b660}{monochromeP2}}();}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_a30447a348df039e3e6e44fb1875cd402}{monochromeP3}}();}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{130     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_ae2379b7f0c93169809b3b0de1d3046fc}{print}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132 \textcolor{keyword}{public}:}
+\DoxyCodeLine{135     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_a3954f39880706933113d7ac13a796984}{loadImg}}();}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{138     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_ad2a4032329c4f3b6043fc267c9d870ea}{resetCurrentImage}}();}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140 \textcolor{keyword}{public}:}
+\DoxyCodeLine{142     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_a0c44af8675c0dc152c15f39d56e9916e}{grayscale}}();}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{145     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_a8cc121f7839f8b020bdd07b7351e7327}{monochrome}}();}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{148     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_a86bcc8dc8183e21f0aab8ef2c7af4b88}{negative}}();}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{151     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_a119e09b1addd48b535ddd20ff9c1f7c7}{rotateRight}}();}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{154     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_ad9fb4fd4857b451e330bf37dcc6bc91d}{rotateLeft}}();}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{157     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_ace70dae82180c76a16d85e8b81e39f20}{flipVertical}}();}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{160     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_a82d860b94ad3e5250fb077e063ce3fa6}{flipHorizontal}}();}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{162 \textcolor{comment}{// TODO}}
+\DoxyCodeLine{165 \textcolor{comment}{}    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_a08df59edbd4db26d5aebeb08b26f9067}{crop}}(\textcolor{keywordtype}{int} xBeg, \textcolor{keywordtype}{int} yBeg, \textcolor{keywordtype}{int} xEnd, \textcolor{keywordtype}{int} yEnd);}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{168     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_image_a643d9f46961e8372b6a573246aad66d1}{save}}();}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170 \};}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//OOP\_PROJECT\_IMAGE\_HPP}}
+
+\end{DoxyCode}

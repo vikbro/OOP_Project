@@ -1,0 +1,27 @@
+# ninja log v5
+5	759	7093382154138065	CMakeFiles/OOP_Project.dir/main.cpp.obj	abfc3415a1df71a1
+1	165	7089517585706138	build.ninja	72c20861ff34e2bb
+36	676	7093136188935979	CMakeFiles/OOP_Project.dir/cpp/Command.cpp.obj	fd9dfc025f2b4e57
+23	1075	7093382157298782	CMakeFiles/OOP_Project.dir/cpp/Image.cpp.obj	86fa91365b62fc35
+1075	1341	7093382159919368	OOP_Project.exe	93c67cbc1e21170f
+37	965	7093382156198527	CMakeFiles/OOP_Project.dir/cpp/Session.cpp.obj	6fa65b18055fb290
+48	930	7093382155848449	CMakeFiles/OOP_Project.dir/cpp/Controller.cpp.obj	ab61a8cf95a1c9bf
+4	605	7093387421273255	CMakeFiles/OOP_Project.dir/main.cpp.obj	abfc3415a1df71a1
+608	903	7093387424203914	OOP_Project.exe	93c67cbc1e21170f
+4	909	7093392331361636	CMakeFiles/OOP_Project.dir/cpp/Image.cpp.obj	86fa91365b62fc35
+909	1212	7093392334332305	OOP_Project.exe	93c67cbc1e21170f
+49	660	7093408062343441	CMakeFiles/OOP_Project.dir/cpp/Command.cpp.obj	fd9dfc025f2b4e57
+4	808	7093408063833764	CMakeFiles/OOP_Project.dir/main.cpp.obj	abfc3415a1df71a1
+37	985	7093408065614154	CMakeFiles/OOP_Project.dir/cpp/Controller.cpp.obj	ab61a8cf95a1c9bf
+17	1004	7093408065794195	CMakeFiles/OOP_Project.dir/cpp/Session.cpp.obj	6fa65b18055fb290
+27	1143	7093408067194502	CMakeFiles/OOP_Project.dir/cpp/Image.cpp.obj	86fa91365b62fc35
+1144	1412	7093408069845104	OOP_Project.exe	93c67cbc1e21170f
+4	542	7093409725296073	CMakeFiles/OOP_Project.dir/main.cpp.obj	abfc3415a1df71a1
+543	805	7093409727856667	OOP_Project.exe	93c67cbc1e21170f
+5	695	7093413585695458	CMakeFiles/OOP_Project.dir/cpp/Controller.cpp.obj	ab61a8cf95a1c9bf
+696	955	7093413588246025	OOP_Project.exe	93c67cbc1e21170f
+4	903	7093415507414541	CMakeFiles/OOP_Project.dir/cpp/Image.cpp.obj	86fa91365b62fc35
+904	1248	7093415510815304	OOP_Project.exe	93c67cbc1e21170f
+5	604	7093421697622415	CMakeFiles/OOP_Project.dir/main.cpp.obj	abfc3415a1df71a1
+20	743	7093421699012733	CMakeFiles/OOP_Project.dir/cpp/Controller.cpp.obj	ab61a8cf95a1c9bf
+744	1040	7093421701913378	OOP_Project.exe	93c67cbc1e21170f

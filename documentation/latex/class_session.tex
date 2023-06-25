@@ -1,0 +1,299 @@
+\hypertarget{class_session}{}\doxysection{Session Class Reference}
+\label{class_session}\index{Session@{Session}}
+
+
+The \mbox{\hyperlink{class_session}{Session}} class stores all the Images in use.  
+
+
+
+
+{\ttfamily \#include $<$Session.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{class_session_a44608eec141e9947a17d29c22903ea90}{get\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Returns the session ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_session_a4084fae1e1f4345330010db341b422a2}{Session}} (size\+\_\+t \mbox{\hyperlink{class_session_aeb940a395467235d770e97d115a748fc}{id}})
+\begin{DoxyCompactList}\small\item\em Constructor to the \mbox{\hyperlink{class_session}{Session}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_adbc34a2b78d6cc7a28b844fbf5ebaa14}{list\+Session}} () const
+\begin{DoxyCompactList}\small\item\em In the console returns all the currently used images. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_a8138eff3b9d8d45dd9114b482598543a}{make\+Collage\+Horizontal}} (const std\+::string \&path1, const std\+::string \&path2)
+\begin{DoxyCompactList}\small\item\em Makes a horizontal collage with to images. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_a94ecc54d435c7782636c703b3279533f}{make\+Collage\+Vertical}} (const std\+::string \&path1, const std\+::string \&path2)
+\begin{DoxyCompactList}\small\item\em Makes a vertical collage with to images. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_a5110ec5d094119f098a3aac5bedd5a73}{add}} (std\+::string \&path)
+\item 
+void \mbox{\hyperlink{class_session_aec0dc9e097213458c68d32d7f09d8cfc}{save}} ()
+\begin{DoxyCompactList}\small\item\em Saves the Images in the current session. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_a3775cf47da8f5bdd929816d6d1e2d2c3}{undo}} ()
+\begin{DoxyCompactList}\small\item\em Removes the last command in the current session commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_ab615c2ae32f73fa42496233146da6f19}{redo}} ()
+\begin{DoxyCompactList}\small\item\em Undoes the removal of the last command in the current session. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_a8bcfe9cffe0521df615077f30ab8c01e}{grayscale}} ()
+\begin{DoxyCompactList}\small\item\em Enters the command {\itshape grayscale} in the current session commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_ac67a3368cb52723057ef983e398f2036}{monochrome}} ()
+\begin{DoxyCompactList}\small\item\em Enters the commands {\itshape monochrome} in the current session commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_a5e1c7db6e205de1568decfed4a6b9835}{negative}} ()
+\begin{DoxyCompactList}\small\item\em Enters the commands {\itshape negative} in the current session commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_a3d633ee4b735c22dc34074921c73cc11}{rotate\+Right}} ()
+\begin{DoxyCompactList}\small\item\em Enters the commands {\itshape rotate\+\_\+right} in the current session commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_aa17b3bedb27ec5ab4e99806e4238e3f0}{rotate\+Left}} ()
+\begin{DoxyCompactList}\small\item\em Enters the commands {\itshape rotate\+\_\+left} in the current session commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_a36f5b9b4a8dacd8e074fb7daddd25022}{flip\+Vertical}} ()
+\begin{DoxyCompactList}\small\item\em Enters the commands {\itshape flip\+\_\+vertical} in the current session commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_a61caddbe2328753d7ffe7a324e5a50fb}{flip\+Horizontal}} ()
+\begin{DoxyCompactList}\small\item\em Enters the commands {\itshape flip\+\_\+horizontal} in the current session commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_session_ab9590dd7a297ce37f78c7dad90fab5d2}{optimize\+Commands}} ()
+\begin{DoxyCompactList}\small\item\em This command applies the \mbox{\hyperlink{class_command_a9f87f11ad392ce4adbbec9d37bcffd08}{Command\+::optimize\+Commands()}} to all the imaged and their transformation commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_session_a830b5670735739565d4aa0cb6c173527}{execute\+Commands}} ()
+\begin{DoxyCompactList}\small\item\em This command executes all the current transformations on the current images. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_image}{Image}} $>$ \mbox{\hyperlink{class_session_a6ad5a167d5e2cf31852029ebb4af7c9c}{images}}
+\begin{DoxyCompactList}\small\item\em Stores the currently used images. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_command}{Command}} $>$ \mbox{\hyperlink{class_session_a199247509b68985cf0373aba74a304d9}{img\+Commands}}
+\begin{DoxyCompactList}\small\item\em Stored the currently applied transformation commands. \end{DoxyCompactList}\item 
+const size\+\_\+t \mbox{\hyperlink{class_session_aeb940a395467235d770e97d115a748fc}{id}}
+\begin{DoxyCompactList}\small\item\em Stored the session ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_session}{Session}} class stores all the Images in use. 
+
+The \mbox{\hyperlink{class_session}{Session}} class stores the Images and the transformation commands paired with them This class also executes all the image transformation commands. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_session_a4084fae1e1f4345330010db341b422a2}\label{class_session_a4084fae1e1f4345330010db341b422a2}} 
+\index{Session@{Session}!Session@{Session}}
+\index{Session@{Session}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{Session()}{Session()}}
+{\footnotesize\ttfamily Session\+::\+Session (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{id }\end{DoxyParamCaption})}
+
+
+
+Constructor to the \mbox{\hyperlink{class_session}{Session}} class. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_session_a5110ec5d094119f098a3aac5bedd5a73}\label{class_session_a5110ec5d094119f098a3aac5bedd5a73}} 
+\index{Session@{Session}!add@{add}}
+\index{add@{add}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Session\+::add (\begin{DoxyParamCaption}\item[{std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & takes the path to the image you want to add in the current session. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_session_a830b5670735739565d4aa0cb6c173527}\label{class_session_a830b5670735739565d4aa0cb6c173527}} 
+\index{Session@{Session}!executeCommands@{executeCommands}}
+\index{executeCommands@{executeCommands}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{executeCommands()}{executeCommands()}}
+{\footnotesize\ttfamily void Session\+::execute\+Commands (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This command executes all the current transformations on the current images. 
+
+\mbox{\Hypertarget{class_session_a61caddbe2328753d7ffe7a324e5a50fb}\label{class_session_a61caddbe2328753d7ffe7a324e5a50fb}} 
+\index{Session@{Session}!flipHorizontal@{flipHorizontal}}
+\index{flipHorizontal@{flipHorizontal}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{flipHorizontal()}{flipHorizontal()}}
+{\footnotesize\ttfamily void Session\+::flip\+Horizontal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enters the commands {\itshape flip\+\_\+horizontal} in the current session commands. 
+
+\mbox{\Hypertarget{class_session_a36f5b9b4a8dacd8e074fb7daddd25022}\label{class_session_a36f5b9b4a8dacd8e074fb7daddd25022}} 
+\index{Session@{Session}!flipVertical@{flipVertical}}
+\index{flipVertical@{flipVertical}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{flipVertical()}{flipVertical()}}
+{\footnotesize\ttfamily void Session\+::flip\+Vertical (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enters the commands {\itshape flip\+\_\+vertical} in the current session commands. 
+
+\mbox{\Hypertarget{class_session_a44608eec141e9947a17d29c22903ea90}\label{class_session_a44608eec141e9947a17d29c22903ea90}} 
+\index{Session@{Session}!getID@{getID}}
+\index{getID@{getID}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily size\+\_\+t Session\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the session ID. 
+
+\mbox{\Hypertarget{class_session_a8bcfe9cffe0521df615077f30ab8c01e}\label{class_session_a8bcfe9cffe0521df615077f30ab8c01e}} 
+\index{Session@{Session}!grayscale@{grayscale}}
+\index{grayscale@{grayscale}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{grayscale()}{grayscale()}}
+{\footnotesize\ttfamily void Session\+::grayscale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enters the command {\itshape grayscale} in the current session commands. 
+
+\mbox{\Hypertarget{class_session_adbc34a2b78d6cc7a28b844fbf5ebaa14}\label{class_session_adbc34a2b78d6cc7a28b844fbf5ebaa14}} 
+\index{Session@{Session}!listSession@{listSession}}
+\index{listSession@{listSession}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{listSession()}{listSession()}}
+{\footnotesize\ttfamily void Session\+::list\+Session (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+In the console returns all the currently used images. 
+
+\mbox{\Hypertarget{class_session_a8138eff3b9d8d45dd9114b482598543a}\label{class_session_a8138eff3b9d8d45dd9114b482598543a}} 
+\index{Session@{Session}!makeCollageHorizontal@{makeCollageHorizontal}}
+\index{makeCollageHorizontal@{makeCollageHorizontal}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{makeCollageHorizontal()}{makeCollageHorizontal()}}
+{\footnotesize\ttfamily void Session\+::make\+Collage\+Horizontal (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path1,  }\item[{const std\+::string \&}]{path2 }\end{DoxyParamCaption})}
+
+
+
+Makes a horizontal collage with to images. 
+
+\begin{DoxyAttention}{Attention}
+This method {\bfseries{DOESN\textquotesingle{}T}} work! 
+\end{DoxyAttention}
+\mbox{\Hypertarget{class_session_a94ecc54d435c7782636c703b3279533f}\label{class_session_a94ecc54d435c7782636c703b3279533f}} 
+\index{Session@{Session}!makeCollageVertical@{makeCollageVertical}}
+\index{makeCollageVertical@{makeCollageVertical}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{makeCollageVertical()}{makeCollageVertical()}}
+{\footnotesize\ttfamily void Session\+::make\+Collage\+Vertical (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path1,  }\item[{const std\+::string \&}]{path2 }\end{DoxyParamCaption})}
+
+
+
+Makes a vertical collage with to images. 
+
+\begin{DoxyAttention}{Attention}
+This method {\bfseries{DOESN\textquotesingle{}T}} work! 
+\end{DoxyAttention}
+\mbox{\Hypertarget{class_session_ac67a3368cb52723057ef983e398f2036}\label{class_session_ac67a3368cb52723057ef983e398f2036}} 
+\index{Session@{Session}!monochrome@{monochrome}}
+\index{monochrome@{monochrome}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{monochrome()}{monochrome()}}
+{\footnotesize\ttfamily void Session\+::monochrome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enters the commands {\itshape monochrome} in the current session commands. 
+
+\mbox{\Hypertarget{class_session_a5e1c7db6e205de1568decfed4a6b9835}\label{class_session_a5e1c7db6e205de1568decfed4a6b9835}} 
+\index{Session@{Session}!negative@{negative}}
+\index{negative@{negative}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{negative()}{negative()}}
+{\footnotesize\ttfamily void Session\+::negative (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enters the commands {\itshape negative} in the current session commands. 
+
+\mbox{\Hypertarget{class_session_ab9590dd7a297ce37f78c7dad90fab5d2}\label{class_session_ab9590dd7a297ce37f78c7dad90fab5d2}} 
+\index{Session@{Session}!optimizeCommands@{optimizeCommands}}
+\index{optimizeCommands@{optimizeCommands}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{optimizeCommands()}{optimizeCommands()}}
+{\footnotesize\ttfamily void Session\+::optimize\+Commands (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This command applies the \mbox{\hyperlink{class_command_a9f87f11ad392ce4adbbec9d37bcffd08}{Command\+::optimize\+Commands()}} to all the imaged and their transformation commands. 
+
+\mbox{\Hypertarget{class_session_ab615c2ae32f73fa42496233146da6f19}\label{class_session_ab615c2ae32f73fa42496233146da6f19}} 
+\index{Session@{Session}!redo@{redo}}
+\index{redo@{redo}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{redo()}{redo()}}
+{\footnotesize\ttfamily void Session\+::redo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Undoes the removal of the last command in the current session. 
+
+\mbox{\Hypertarget{class_session_aa17b3bedb27ec5ab4e99806e4238e3f0}\label{class_session_aa17b3bedb27ec5ab4e99806e4238e3f0}} 
+\index{Session@{Session}!rotateLeft@{rotateLeft}}
+\index{rotateLeft@{rotateLeft}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{rotateLeft()}{rotateLeft()}}
+{\footnotesize\ttfamily void Session\+::rotate\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enters the commands {\itshape rotate\+\_\+left} in the current session commands. 
+
+\mbox{\Hypertarget{class_session_a3d633ee4b735c22dc34074921c73cc11}\label{class_session_a3d633ee4b735c22dc34074921c73cc11}} 
+\index{Session@{Session}!rotateRight@{rotateRight}}
+\index{rotateRight@{rotateRight}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{rotateRight()}{rotateRight()}}
+{\footnotesize\ttfamily void Session\+::rotate\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enters the commands {\itshape rotate\+\_\+right} in the current session commands. 
+
+\mbox{\Hypertarget{class_session_aec0dc9e097213458c68d32d7f09d8cfc}\label{class_session_aec0dc9e097213458c68d32d7f09d8cfc}} 
+\index{Session@{Session}!save@{save}}
+\index{save@{save}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void Session\+::save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Saves the Images in the current session. 
+
+\mbox{\Hypertarget{class_session_a3775cf47da8f5bdd929816d6d1e2d2c3}\label{class_session_a3775cf47da8f5bdd929816d6d1e2d2c3}} 
+\index{Session@{Session}!undo@{undo}}
+\index{undo@{undo}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{undo()}{undo()}}
+{\footnotesize\ttfamily void Session\+::undo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes the last command in the current session commands. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_session_aeb940a395467235d770e97d115a748fc}\label{class_session_aeb940a395467235d770e97d115a748fc}} 
+\index{Session@{Session}!id@{id}}
+\index{id@{id}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily const size\+\_\+t Session\+::id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stored the session ID. 
+
+\mbox{\Hypertarget{class_session_a6ad5a167d5e2cf31852029ebb4af7c9c}\label{class_session_a6ad5a167d5e2cf31852029ebb4af7c9c}} 
+\index{Session@{Session}!images@{images}}
+\index{images@{images}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{images}{images}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_image}{Image}}$>$ Session\+::images\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stores the currently used images. 
+
+\mbox{\Hypertarget{class_session_a199247509b68985cf0373aba74a304d9}\label{class_session_a199247509b68985cf0373aba74a304d9}} 
+\index{Session@{Session}!imgCommands@{imgCommands}}
+\index{imgCommands@{imgCommands}!Session@{Session}}
+\doxysubsubsection{\texorpdfstring{imgCommands}{imgCommands}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_command}{Command}}$>$ Session\+::img\+Commands\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stored the currently applied transformation commands. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+hpp/\mbox{\hyperlink{_session_8hpp}{Session.\+hpp}}\item 
+cpp/\mbox{\hyperlink{_session_8cpp}{Session.\+cpp}}\end{DoxyCompactItemize}
